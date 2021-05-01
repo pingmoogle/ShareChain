@@ -13,7 +13,9 @@ contract ShareChain{
         address fileOwner;
         address fileReveiver;
         string fileHash;
-        string preKeyToYou;
+        string fileKey;
+        string capsule;
+        string kfrags;
         // mapping(uint => strategy) thisStrategy;
     }
 
@@ -27,7 +29,8 @@ contract ShareChain{
     }
 
     function uploadShare(
-        address thefileReceiver, string memory thefileHash, string memory thepreKeyToYou
+        address thefileReceiver, string memory thefileHash, string memory thefileKey,
+        string memory theCapsule, string memory theKfrags
     ) public{
         uint nowID = allSharesNum++;
         allShares.push(
@@ -36,7 +39,9 @@ contract ShareChain{
                 fileOwner: msg.sender,
                 fileHash: thefileHash,
                 fileReveiver: thefileReceiver,
-                preKeyToYou: thepreKeyToYou
+                fileKey: thefileKey,
+                capsule: theCapsule,
+                kfrags: theKfrags
             })
         );
         userToShares[thefileReceiver].push(nowID);
