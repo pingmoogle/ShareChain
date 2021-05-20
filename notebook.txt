@@ -1,6 +1,14 @@
 let instance = await ShareChain.deployed()
-instance.uploadShare("0xe193e9C9090ab40c14e6800B7C0b5F7155D2FdA8","hash1","key1")
+instance.uploadShare("0x592e58E3DeC6d3570C6C0468fF0d2B65fD23D175","hash0","key0","capsule0","cfrag0")
 
 instance.uploadShare("0xB40330A6Fe4AcF168486F2Fe9A8bd6657FbE816d","hash100","key100")
 
 instance.requestShare()
+
+instance.uploadFrags(0, 1, "kfrag3", "0xecEd33A21b1426d0Ac84079c61a8582eC57cf7E5")
+
+instance.showOneShare(0)
+
+instance.showOneFrags(0)
+
+instance.updateFrags(0, 0, "cfrag1")
