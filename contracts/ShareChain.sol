@@ -3,11 +3,6 @@ pragma solidity ^0.7.0;
 pragma experimental ABIEncoderV2;
 
 contract ShareChain{
-    // struct Strategy{
-    //     uint timeStart; // 0 for forever
-    //     uint timeEnd; // 0 for forever
-        
-    // }
 
     struct Frag{
         uint fragType; // 0 for c, 1 for k
@@ -23,6 +18,13 @@ contract ShareChain{
         string fileKey;
         string capsule;
     }
+
+    event shareEvent(
+        address indexed fileOwner,
+        address indexed fileReceiver,
+        string indexed fileHash,
+        uint  id
+    );
 
     mapping(uint => Frag[]) public shareToFrags;
     mapping(address => uint[]) public userToShares;
@@ -55,6 +57,8 @@ contract ShareChain{
 
         allShares.push(itShare);
         userToShares[thefileReceiver].push(nowID);
+
+        emit shareEvent(msg.sender, thefileReceiver, thefileHash, nowID);
     }
 
     function uploadFrags(uint ID, uint fragType, string memory frag, address fragOwner)
@@ -98,6 +102,5 @@ contract ShareChain{
         ts = allShares[id];
     }
 
-    // function checkStrategy(uint id)
-
+    
 }

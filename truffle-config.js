@@ -58,7 +58,14 @@ module.exports = {
       host: "127.0.0.1",
       port: 7545,
       network_id: "5777",
-      from: "0x4d0BF67D8095F947BF820fD4c079a83d1ca07436"
+      from: "0xc32E66Fa651A5d386513837c0F76b3bF4f17783F"
+    },
+
+    ganacheUser3:{
+      host: "127.0.0.1",
+      port: 7545,
+      network_id: "5777",
+      from: "0xCbA52417CAF9349c2b80C0BEEdF6e44cA15beF25"
     },
 
     user2:{

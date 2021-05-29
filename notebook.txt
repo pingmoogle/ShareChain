@@ -1,5 +1,5 @@
 let instance = await ShareChain.deployed()
-instance.uploadShare("0x592e58E3DeC6d3570C6C0468fF0d2B65fD23D175","hash0","key0","capsule0","cfrag0")
+instance.uploadShare("0xc32E66Fa651A5d386513837c0F76b3bF4f17783F","hash0","key0","capsule0","cfrag0")
 
 instance.uploadShare("0xB40330A6Fe4AcF168486F2Fe9A8bd6657FbE816d","hash100","key100")
 
